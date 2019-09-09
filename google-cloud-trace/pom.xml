@@ -20,8 +20,24 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>com.google.cloud</groupId>
-      <artifactId>google-cloud-core-grpc</artifactId>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-stub</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api</groupId>
+      <artifactId>api-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.api.grpc</groupId>
+      <artifactId>proto-google-common-protos</artifactId>
     </dependency>
     <dependency>
       <groupId>com.google.api.grpc</groupId>
@@ -30,6 +46,10 @@
     <dependency>
       <groupId>com.google.api.grpc</groupId>
       <artifactId>proto-google-cloud-trace-v2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
     </dependency>
 
     <!-- Test dependencies -->
@@ -49,6 +69,11 @@
       <scope>test</scope>
     </dependency>
     <!-- Need testing utility classes for generated gRPC clients tests -->
+    <dependency>
+      <groupId>com.google.api</groupId>
+      <artifactId>gax</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-grpc</artifactId>
