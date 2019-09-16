@@ -18,7 +18,7 @@ If you are using Maven, add this to your pom.xml file
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-trace</artifactId>
-  <version>0.108.0-beta</version>
+  <version>0.109.0</version>
 </dependency>
 ```
 If you are using Gradle, add this to your dependencies
