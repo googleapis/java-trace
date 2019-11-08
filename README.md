@@ -11,7 +11,7 @@ Java idiomatic client for [Stackdriver Trace][stackdriver-trace].
 > make backwards-incompatible changes.
 
 ## Quickstart
-If you are using Maven with Bom, Add this to your pom.xml file.
+If you are using Maven with a BOM, add this to your pom.xml file.
 ```xml
 <dependencyManagement>
  <dependencies>
@@ -31,7 +31,7 @@ If you are using Maven with Bom, Add this to your pom.xml file.
 </dependency>
 ```
 [//]: # ({x-version-update-start:google-cloud-trace:released})
-If you are using Maven without Bom, Add this to your dependencies.
+If you are using Maven without a BOM, add this to your dependencies.
 ```xml
 <dependency>
   <groupId>com.google.cloud</groupId>
