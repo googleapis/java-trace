@@ -31,6 +31,7 @@ import org.junit.Test;
 import org.threeten.bp.Instant;
 
 public class ITSystemTest {
+
   private static TraceServiceClient client;
   private static final String PROJECT_ID = ServiceOptions.getDefaultProjectId();
   private static final String TRACE_ID = UUID.randomUUID().toString().replace("-", "");
