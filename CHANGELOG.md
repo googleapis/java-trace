@@ -1,5 +1,19 @@
 # Changelog
 
+### [0.109.4](https://www.github.com/googleapis/java-trace/compare/v0.109.3...v0.109.4) (2020-01-15)
+
+
+### Dependencies
+
+* update core dependencies ([#66](https://www.github.com/googleapis/java-trace/issues/66)) ([8dc9e89](https://www.github.com/googleapis/java-trace/commit/8dc9e8939b5fb1e1420b299c04428b266d4900cf))
+* update dependency io.grpc:grpc-bom to v1.26.0 ([#64](https://www.github.com/googleapis/java-trace/issues/64)) ([1cb9017](https://www.github.com/googleapis/java-trace/commit/1cb9017e8430e3b172e0833dbfeef90b4e9e83ed))
+* update dependency org.threeten:threetenbp to v1.4.1 ([68422f9](https://www.github.com/googleapis/java-trace/commit/68422f9537b8031aefbcbb90d4cbe5b25ed0b283))
+
+
+### Documentation
+
+* **regen:** updated docs from protoc update ([#58](https://www.github.com/googleapis/java-trace/issues/58)) ([fa43c47](https://www.github.com/googleapis/java-trace/commit/fa43c47b69022c513304c92d1936ae6115435547))
+
 ### [0.109.3](https://www.github.com/googleapis/java-trace/compare/v0.109.2...v0.109.3) (2019-12-03)
 
 
