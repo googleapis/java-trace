@@ -88,6 +88,10 @@ use this Stackdriver Trace Client Library.
 
 To get help, follow the instructions in the [shared Troubleshooting document][troubleshooting].
 
+## Transport
+
+Stackdriver Trace uses gRPC for the transport layer.
+
 ## Java Versions
 
 Java 7 or above is required for using this client.

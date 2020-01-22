@@ -32,12 +32,8 @@ for version in versions:
         gapic=gapic,
     )
 
-java.common_templates()
-
-# common_templates = gcp.CommonTemplates()
-# templates = common_templates.java_library()
-# s.copy(templates, excludes=[
-#   '.gitignore',
-#   'README.md',
-# ])
-
+common_templates = gcp.CommonTemplates()
+templates = common_templates.java_library()
+s.copy(templates, excludes=[
+  'README.md',
+])
