@@ -40,17 +40,17 @@ If you are using Maven without BOM, add this to your dependencies:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-trace</artifactId>
-  <version>0.109.3-beta</version>
+  <version>0.110.0-beta</version>
 </dependency>
 ```
 
 If you are using Gradle, add this to your dependencies
 ```Groovy
-compile 'com.google.cloud:google-cloud-trace:0.109.3-beta'
+compile 'com.google.cloud:google-cloud-trace:0.110.0-beta'
 ```
 If you are using SBT, add this to your dependencies
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-trace" % "0.109.3-beta"
+libraryDependencies += "com.google.cloud" % "google-cloud-trace" % "0.110.0-beta"
 ```
 [//]: # ({x-version-update-end})
 
