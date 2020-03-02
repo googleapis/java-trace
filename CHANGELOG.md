@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.0.3](https://www.github.com/googleapis/java-trace/compare/v1.0.2...v1.0.3) (2020-03-02)
+
+
+### Dependencies
+
+* update core dependencies to v1.54.0 ([#110](https://www.github.com/googleapis/java-trace/issues/110)) ([7485b40](https://www.github.com/googleapis/java-trace/commit/7485b40476866002944eb14346ad5dba127b9941))
+* update dependency com.google.cloud:google-cloud-core to v1.93.0 ([#112](https://www.github.com/googleapis/java-trace/issues/112)) ([28fb855](https://www.github.com/googleapis/java-trace/commit/28fb8559620b1469a10383f543314e286314c49a))
+* update dependency io.grpc:grpc-bom to v1.27.2 ([915e871](https://www.github.com/googleapis/java-trace/commit/915e87167a306264e9a6ae1090d0b1cdbb4665e2))
+
 ### [1.0.1](https://www.github.com/googleapis/java-trace/compare/v1.0.0...v1.0.1) (2020-02-04)
 
 
