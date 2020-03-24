@@ -1,11 +1,12 @@
 {
-  "updateTime": "2020-03-24T10:14:52.831272Z",
+  "updateTime": "2020-03-24T10:17:46.083232Z",
   "sources": [
     {
-      "generator": {
-        "name": "artman",
-        "version": "1.1.1",
-        "dockerImage": "googleapis/artman@sha256:5ef340c8d9334719bc5c6981d95f4a5d2737b0a6a24f2b9a0d430e96fff85c5b"
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "64ab9744073de81fec1b3a6a931befc8a90edf90",
+        "internalRef": "301373760"
       }
     },
     {
@@ -28,21 +29,19 @@
     {
       "client": {
         "source": "googleapis",
-        "apiName": "trace",
+        "apiName": "devtools-cloudtrace",
         "apiVersion": "v1",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/devtools/cloudtrace/artman_cloudtrace_v1.yaml"
+        "generator": "bazel"
       }
     },
     {
       "client": {
         "source": "googleapis",
-        "apiName": "trace",
+        "apiName": "devtools-cloudtrace",
         "apiVersion": "v2",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/devtools/cloudtrace/artman_cloudtrace_v2.yaml"
+        "generator": "bazel"
       }
     }
   ]
