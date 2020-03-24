@@ -129,19 +129,43 @@ public final class TraceServiceGrpc {
 
   /** Creates a new async stub that supports all call types for the service */
   public static TraceServiceStub newStub(io.grpc.Channel channel) {
-    return new TraceServiceStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TraceServiceStub> factory =
+        new io.grpc.stub.AbstractStub.StubFactory<TraceServiceStub>() {
+          @java.lang.Override
+          public TraceServiceStub newStub(
+              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            return new TraceServiceStub(channel, callOptions);
+          }
+        };
+    return TraceServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static TraceServiceBlockingStub newBlockingStub(io.grpc.Channel channel) {
-    return new TraceServiceBlockingStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TraceServiceBlockingStub> factory =
+        new io.grpc.stub.AbstractStub.StubFactory<TraceServiceBlockingStub>() {
+          @java.lang.Override
+          public TraceServiceBlockingStub newStub(
+              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            return new TraceServiceBlockingStub(channel, callOptions);
+          }
+        };
+    return TraceServiceBlockingStub.newStub(factory, channel);
   }
 
   /** Creates a new ListenableFuture-style stub that supports unary calls on the service */
   public static TraceServiceFutureStub newFutureStub(io.grpc.Channel channel) {
-    return new TraceServiceFutureStub(channel);
+    io.grpc.stub.AbstractStub.StubFactory<TraceServiceFutureStub> factory =
+        new io.grpc.stub.AbstractStub.StubFactory<TraceServiceFutureStub>() {
+          @java.lang.Override
+          public TraceServiceFutureStub newStub(
+              io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+            return new TraceServiceFutureStub(channel, callOptions);
+          }
+        };
+    return TraceServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -214,11 +238,8 @@ public final class TraceServiceGrpc {
    * contain span(s) from multiple services.
    * </pre>
    */
-  public static final class TraceServiceStub extends io.grpc.stub.AbstractStub<TraceServiceStub> {
-    private TraceServiceStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
+  public static final class TraceServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<TraceServiceStub> {
     private TraceServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -272,11 +293,7 @@ public final class TraceServiceGrpc {
    * </pre>
    */
   public static final class TraceServiceBlockingStub
-      extends io.grpc.stub.AbstractStub<TraceServiceBlockingStub> {
-    private TraceServiceBlockingStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
+      extends io.grpc.stub.AbstractBlockingStub<TraceServiceBlockingStub> {
     private TraceServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
@@ -325,11 +342,7 @@ public final class TraceServiceGrpc {
    * </pre>
    */
   public static final class TraceServiceFutureStub
-      extends io.grpc.stub.AbstractStub<TraceServiceFutureStub> {
-    private TraceServiceFutureStub(io.grpc.Channel channel) {
-      super(channel);
-    }
-
+      extends io.grpc.stub.AbstractFutureStub<TraceServiceFutureStub> {
     private TraceServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
