@@ -10,6 +10,27 @@ Java idiomatic client for [Stackdriver Trace][product-docs].
 
 ## Quickstart
 
+If you are using Maven with [BOM][libraries-bom], add this to your pom.xml file
+```xml
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>libraries-bom</artifactId>
+      <version>5.1.0</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+
+<dependencies>
+  <dependency>
+    <groupId>com.google.cloud</groupId>
+    <artifactId>google-cloud-trace</artifactId>
+  </dependency>
+
+```
 
 If you are using Maven, add this to your pom.xml file:
 
@@ -19,6 +40,7 @@ If you are using Maven, add this to your pom.xml file:
   <artifactId>google-cloud-trace</artifactId>
   <version>1.0.3</version>
 </dependency>
+
 ```
 
 [//]: # ({x-version-update-start:google-cloud-trace:released})
