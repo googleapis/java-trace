@@ -4,23 +4,23 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-trace.git",
-        "sha": "e92e9cfa385cf4897f21fb02d6da8dfdfe4d3234"
+        "sha": "134f1e4ed2ff8f57fbb08a0426e83eec408d76e2"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "10f05cf8dc0c823a24965f010aeecf327ab89b27",
-        "internalRef": "316121797"
+        "sha": "13d3b3ace10bd5a4865094ad2ba5e62b02e1e6bf",
+        "internalRef": "319788951"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "10f05cf8dc0c823a24965f010aeecf327ab89b27",
-        "internalRef": "316121797"
+        "sha": "13d3b3ace10bd5a4865094ad2ba5e62b02e1e6bf",
+        "internalRef": "319788951"
       }
     },
     {
