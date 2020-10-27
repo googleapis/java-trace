@@ -42,6 +42,10 @@ public final class GetTraceRequest extends com.google.protobuf.GeneratedMessageV
     traceId_ = "";
   }
 
+  public static void foo() {
+    System.out.println("bar");
+  }
+
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(UnusedPrivateParameter unused) {
