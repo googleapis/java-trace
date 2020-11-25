@@ -22,17 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * This file describes an API for collecting and viewing traces and spans
- * within a trace.  A Trace is a collection of spans corresponding to a single
- * operation or set of operations for an application. A span is an individual
- * timed event which forms a node of the trace tree. A single trace may
- * contain span(s) from multiple services.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/cloudtrace/v2/tracing.proto")
@@ -168,40 +158,17 @@ public final class TraceServiceGrpc {
     return TraceServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. A single trace may
-   * contain span(s) from multiple services.
-   * </pre>
-   */
+  /** */
   public abstract static class TraceServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new spans to new or existing traces. You cannot update
-     * existing spans.
-     * </pre>
-     */
+    /** */
     public void batchWriteSpans(
         com.google.devtools.cloudtrace.v2.BatchWriteSpansRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getBatchWriteSpansMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new span.
-     * </pre>
-     */
+    /** */
     public void createSpan(
         com.google.devtools.cloudtrace.v2.Span request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v2.Span> responseObserver) {
@@ -227,17 +194,7 @@ public final class TraceServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. A single trace may
-   * contain span(s) from multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceStub
       extends io.grpc.stub.AbstractAsyncStub<TraceServiceStub> {
     private TraceServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -249,14 +206,7 @@ public final class TraceServiceGrpc {
       return new TraceServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new spans to new or existing traces. You cannot update
-     * existing spans.
-     * </pre>
-     */
+    /** */
     public void batchWriteSpans(
         com.google.devtools.cloudtrace.v2.BatchWriteSpansRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -266,13 +216,7 @@ public final class TraceServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new span.
-     * </pre>
-     */
+    /** */
     public void createSpan(
         com.google.devtools.cloudtrace.v2.Span request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v2.Span> responseObserver) {
@@ -281,17 +225,7 @@ public final class TraceServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. A single trace may
-   * contain span(s) from multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TraceServiceBlockingStub> {
     private TraceServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -304,43 +238,20 @@ public final class TraceServiceGrpc {
       return new TraceServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new spans to new or existing traces. You cannot update
-     * existing spans.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty batchWriteSpans(
         com.google.devtools.cloudtrace.v2.BatchWriteSpansRequest request) {
       return blockingUnaryCall(getChannel(), getBatchWriteSpansMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new span.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.cloudtrace.v2.Span createSpan(
         com.google.devtools.cloudtrace.v2.Span request) {
       return blockingUnaryCall(getChannel(), getCreateSpanMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. A single trace may
-   * contain span(s) from multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<TraceServiceFutureStub> {
     private TraceServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -353,27 +264,14 @@ public final class TraceServiceGrpc {
       return new TraceServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new spans to new or existing traces. You cannot update
-     * existing spans.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         batchWriteSpans(com.google.devtools.cloudtrace.v2.BatchWriteSpansRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getBatchWriteSpansMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new span.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.cloudtrace.v2.Span>
         createSpan(com.google.devtools.cloudtrace.v2.Span request) {

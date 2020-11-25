@@ -22,17 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * This file describes an API for collecting and viewing traces and spans
- * within a trace.  A Trace is a collection of spans corresponding to a single
- * operation or set of operations for an application. A span is an individual
- * timed event which forms a node of the trace tree. Spans for a single trace
- * may span multiple services.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/cloudtrace/v1/trace.proto")
@@ -217,26 +207,10 @@ public final class TraceServiceGrpc {
     return TraceServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. Spans for a single trace
-   * may span multiple services.
-   * </pre>
-   */
+  /** */
   public abstract static class TraceServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns of a list of traces that match the specified filter conditions.
-     * </pre>
-     */
+    /** */
     public void listTraces(
         com.google.devtools.cloudtrace.v1.ListTracesRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v1.ListTracesResponse>
@@ -244,30 +218,14 @@ public final class TraceServiceGrpc {
       asyncUnimplementedUnaryCall(getListTracesMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single trace by its ID.
-     * </pre>
-     */
+    /** */
     public void getTrace(
         com.google.devtools.cloudtrace.v1.GetTraceRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v1.Trace> responseObserver) {
       asyncUnimplementedUnaryCall(getGetTraceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new traces to Stackdriver Trace or updates existing traces. If the ID
-     * of a trace that you send matches that of an existing trace, any fields
-     * in the existing trace and its spans are overwritten by the provided values,
-     * and any new fields provided are merged with the existing trace data. If the
-     * ID does not match, a new trace is created.
-     * </pre>
-     */
+    /** */
     public void patchTraces(
         com.google.devtools.cloudtrace.v1.PatchTracesRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -300,17 +258,7 @@ public final class TraceServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. Spans for a single trace
-   * may span multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceStub
       extends io.grpc.stub.AbstractAsyncStub<TraceServiceStub> {
     private TraceServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -322,13 +270,7 @@ public final class TraceServiceGrpc {
       return new TraceServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns of a list of traces that match the specified filter conditions.
-     * </pre>
-     */
+    /** */
     public void listTraces(
         com.google.devtools.cloudtrace.v1.ListTracesRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v1.ListTracesResponse>
@@ -337,13 +279,7 @@ public final class TraceServiceGrpc {
           getChannel().newCall(getListTracesMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single trace by its ID.
-     * </pre>
-     */
+    /** */
     public void getTrace(
         com.google.devtools.cloudtrace.v1.GetTraceRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.cloudtrace.v1.Trace> responseObserver) {
@@ -351,17 +287,7 @@ public final class TraceServiceGrpc {
           getChannel().newCall(getGetTraceMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new traces to Stackdriver Trace or updates existing traces. If the ID
-     * of a trace that you send matches that of an existing trace, any fields
-     * in the existing trace and its spans are overwritten by the provided values,
-     * and any new fields provided are merged with the existing trace data. If the
-     * ID does not match, a new trace is created.
-     * </pre>
-     */
+    /** */
     public void patchTraces(
         com.google.devtools.cloudtrace.v1.PatchTracesRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -372,17 +298,7 @@ public final class TraceServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. Spans for a single trace
-   * may span multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<TraceServiceBlockingStub> {
     private TraceServiceBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -395,58 +311,26 @@ public final class TraceServiceGrpc {
       return new TraceServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns of a list of traces that match the specified filter conditions.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.cloudtrace.v1.ListTracesResponse listTraces(
         com.google.devtools.cloudtrace.v1.ListTracesRequest request) {
       return blockingUnaryCall(getChannel(), getListTracesMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single trace by its ID.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.cloudtrace.v1.Trace getTrace(
         com.google.devtools.cloudtrace.v1.GetTraceRequest request) {
       return blockingUnaryCall(getChannel(), getGetTraceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new traces to Stackdriver Trace or updates existing traces. If the ID
-     * of a trace that you send matches that of an existing trace, any fields
-     * in the existing trace and its spans are overwritten by the provided values,
-     * and any new fields provided are merged with the existing trace data. If the
-     * ID does not match, a new trace is created.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty patchTraces(
         com.google.devtools.cloudtrace.v1.PatchTracesRequest request) {
       return blockingUnaryCall(getChannel(), getPatchTracesMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * This file describes an API for collecting and viewing traces and spans
-   * within a trace.  A Trace is a collection of spans corresponding to a single
-   * operation or set of operations for an application. A span is an individual
-   * timed event which forms a node of the trace tree. Spans for a single trace
-   * may span multiple services.
-   * </pre>
-   */
+  /** */
   public static final class TraceServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<TraceServiceFutureStub> {
     private TraceServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -459,13 +343,7 @@ public final class TraceServiceGrpc {
       return new TraceServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns of a list of traces that match the specified filter conditions.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.cloudtrace.v1.ListTracesResponse>
         listTraces(com.google.devtools.cloudtrace.v1.ListTracesRequest request) {
@@ -473,30 +351,14 @@ public final class TraceServiceGrpc {
           getChannel().newCall(getListTracesMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets a single trace by its ID.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.cloudtrace.v1.Trace>
         getTrace(com.google.devtools.cloudtrace.v1.GetTraceRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetTraceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sends new traces to Stackdriver Trace or updates existing traces. If the ID
-     * of a trace that you send matches that of an existing trace, any fields
-     * in the existing trace and its spans are overwritten by the provided values,
-     * and any new fields provided are merged with the existing trace data. If the
-     * ID does not match, a new trace is created.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         patchTraces(com.google.devtools.cloudtrace.v1.PatchTracesRequest request) {
       return futureUnaryCall(
