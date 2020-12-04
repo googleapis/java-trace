@@ -4,23 +4,23 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-trace.git",
-        "sha": "0c94acad2847d4c1eb4e2a183d42d9b39e12f763"
+        "sha": "e401ddb308c153e070fabfe7e9979eae1fefe5d6"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "13d3b3ace10bd5a4865094ad2ba5e62b02e1e6bf",
-        "internalRef": "319788951"
+        "sha": "d3a630b0db63a11420e57c7a0d718e511203f022",
+        "internalRef": "345749672"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "13d3b3ace10bd5a4865094ad2ba5e62b02e1e6bf",
-        "internalRef": "319788951"
+        "sha": "d3a630b0db63a11420e57c7a0d718e511203f022",
+        "internalRef": "345749672"
       }
     },
     {
@@ -135,11 +135,9 @@
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v1/MockTraceService.java",
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v1/MockTraceServiceImpl.java",
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v1/TraceServiceClientTest.java",
-    "google-cloud-trace/src/test/java/com/google/cloud/trace/v1/TraceServiceSmokeTest.java",
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v2/MockTraceService.java",
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v2/MockTraceServiceImpl.java",
     "google-cloud-trace/src/test/java/com/google/cloud/trace/v2/TraceServiceClientTest.java",
-    "google-cloud-trace/src/test/java/com/google/cloud/trace/v2/TraceServiceSmokeTest.java",
     "grpc-google-cloud-trace-v1/src/main/java/com/google/devtools/cloudtrace/v1/TraceServiceGrpc.java",
     "grpc-google-cloud-trace-v2/src/main/java/com/google/devtools/cloudtrace/v2/TraceServiceGrpc.java",
     "java.header",
