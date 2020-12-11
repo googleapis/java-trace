@@ -154,7 +154,7 @@ public class TraceServiceClient implements BackgroundResource {
   /**
    * Returns of a list of traces that match the specified filter conditions.
    *
-   * @param project_id Required. ID of the Cloud project where the trace data is stored.
+   * @param projectId Required. ID of the Cloud project where the trace data is stored.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final ListTracesPagedResponse listTraces(String projectId) {
@@ -197,8 +197,8 @@ public class TraceServiceClient implements BackgroundResource {
   /**
    * Gets a single trace by its ID.
    *
-   * @param project_id Required. ID of the Cloud project where the trace data is stored.
-   * @param trace_id Required. ID of the trace to return.
+   * @param projectId Required. ID of the Cloud project where the trace data is stored.
+   * @param traceId Required. ID of the trace to return.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
   public final Trace getTrace(String projectId, String traceId) {
@@ -235,7 +235,7 @@ public class TraceServiceClient implements BackgroundResource {
    * overwritten by the provided values, and any new fields provided are merged with the existing
    * trace data. If the ID does not match, a new trace is created.
    *
-   * @param project_id Required. ID of the Cloud project where the trace data is stored.
+   * @param projectId Required. ID of the Cloud project where the trace data is stored.
    * @param traces Required. The body of the message.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
