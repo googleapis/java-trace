@@ -166,8 +166,8 @@ public class TraceServiceClientTest {
     Span expectedResponse =
         Span.newBuilder()
             .setName(SpanName.of("[PROJECT]", "[TRACE]", "[SPAN]").toString())
-            .setSpanId("span_id-2011840976")
-            .setParentSpanId("parent_span_id-1757797477")
+            .setSpanId("spanId-896182779")
+            .setParentSpanId("parentSpanId1059234639")
             .setDisplayName(TruncatableString.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
@@ -181,8 +181,8 @@ public class TraceServiceClientTest {
     Span request =
         Span.newBuilder()
             .setName(SpanName.of("[PROJECT]", "[TRACE]", "[SPAN]").toString())
-            .setSpanId("span_id-2011840976")
-            .setParentSpanId("parent_span_id-1757797477")
+            .setSpanId("spanId-896182779")
+            .setParentSpanId("parentSpanId1059234639")
             .setDisplayName(TruncatableString.newBuilder().build())
             .setStartTime(Timestamp.newBuilder().build())
             .setEndTime(Timestamp.newBuilder().build())
@@ -229,8 +229,8 @@ public class TraceServiceClientTest {
       Span request =
           Span.newBuilder()
               .setName(SpanName.of("[PROJECT]", "[TRACE]", "[SPAN]").toString())
-              .setSpanId("span_id-2011840976")
-              .setParentSpanId("parent_span_id-1757797477")
+              .setSpanId("spanId-896182779")
+              .setParentSpanId("parentSpanId1059234639")
               .setDisplayName(TruncatableString.newBuilder().build())
               .setStartTime(Timestamp.newBuilder().build())
               .setEndTime(Timestamp.newBuilder().build())

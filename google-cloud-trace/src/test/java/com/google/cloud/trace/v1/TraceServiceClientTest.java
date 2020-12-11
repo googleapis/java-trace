@@ -97,7 +97,7 @@ public class TraceServiceClientTest {
             .build();
     mockTraceService.addResponse(expectedResponse);
 
-    String projectId = "project_id-1969970175";
+    String projectId = "projectId-894832108";
 
     ListTracesPagedResponse pagedListResponse = client.listTraces(projectId);
 
@@ -123,7 +123,7 @@ public class TraceServiceClientTest {
     mockTraceService.addException(exception);
 
     try {
-      String projectId = "project_id-1969970175";
+      String projectId = "projectId-894832108";
       client.listTraces(projectId);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -135,14 +135,14 @@ public class TraceServiceClientTest {
   public void getTraceTest() throws Exception {
     Trace expectedResponse =
         Trace.newBuilder()
-            .setProjectId("project_id-1969970175")
-            .setTraceId("trace_id1270300245")
+            .setProjectId("projectId-894832108")
+            .setTraceId("traceId-1067401920")
             .addAllSpans(new ArrayList<TraceSpan>())
             .build();
     mockTraceService.addResponse(expectedResponse);
 
-    String projectId = "project_id-1969970175";
-    String traceId = "trace_id1270300245";
+    String projectId = "projectId-894832108";
+    String traceId = "traceId-1067401920";
 
     Trace actualResponse = client.getTrace(projectId, traceId);
     Assert.assertEquals(expectedResponse, actualResponse);
@@ -165,8 +165,8 @@ public class TraceServiceClientTest {
     mockTraceService.addException(exception);
 
     try {
-      String projectId = "project_id-1969970175";
-      String traceId = "trace_id1270300245";
+      String projectId = "projectId-894832108";
+      String traceId = "traceId-1067401920";
       client.getTrace(projectId, traceId);
       Assert.fail("No exception raised");
     } catch (InvalidArgumentException e) {
@@ -179,7 +179,7 @@ public class TraceServiceClientTest {
     Empty expectedResponse = Empty.newBuilder().build();
     mockTraceService.addResponse(expectedResponse);
 
-    String projectId = "project_id-1969970175";
+    String projectId = "projectId-894832108";
     Traces traces = Traces.newBuilder().build();
 
     client.patchTraces(projectId, traces);
@@ -202,7 +202,7 @@ public class TraceServiceClientTest {
     mockTraceService.addException(exception);
 
     try {
-      String projectId = "project_id-1969970175";
+      String projectId = "projectId-894832108";
       Traces traces = Traces.newBuilder().build();
       client.patchTraces(projectId, traces);
       Assert.fail("No exception raised");
