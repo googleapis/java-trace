@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.14-lts.1](https://www.github.com/googleapis/java-trace/compare/1.2.13...v1.2.14-lts.1) (2021-03-04)
+
+
+### Features
+
+* release as LTS ([f48b0d6](https://www.github.com/googleapis/java-trace/commit/f48b0d699c2ca5c60ececd2a23a486d059dc97d4))
+
 ### [1.2.13](https://www.github.com/googleapis/java-trace/compare/v1.2.12...v1.2.13) (2021-02-25)
 
 
