@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0-sp.1](https://www.github.com/googleapis/java-trace/compare/1.3.0...v1.3.0-sp.1) (2021-04-23)
+
+
+### Bug Fixes
+
+* release initial sp version ([#468](https://www.github.com/googleapis/java-trace/issues/468)) ([76903ca](https://www.github.com/googleapis/java-trace/commit/76903ca848d9609edffcabf14f39e3a34e081839))
+
 ## [1.3.0](https://www.github.com/googleapis/java-trace/compare/v1.2.13...v1.3.0) (2021-03-11)
 
 
