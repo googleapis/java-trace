@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://www.github.com/googleapis/java-trace/compare/v1.4.2...v1.5.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#584](https://www.github.com/googleapis/java-trace/issues/584)) ([15c4cdc](https://www.github.com/googleapis/java-trace/commit/15c4cdc07caf0037de11fe9043521e792bb55f20))
+
 ### [1.4.2](https://www.github.com/googleapis/java-trace/compare/v1.4.1...v1.4.2) (2021-07-05)
 
 
