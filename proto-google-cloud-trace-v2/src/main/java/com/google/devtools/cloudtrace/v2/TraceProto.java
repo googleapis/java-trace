@@ -97,8 +97,7 @@ public final class TraceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + ")google/devtools/cloudtrace/v2/trace.pr"
-          + "oto\022\035google.devtools.cloudtrace.v2\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\036google/protobuf/wrappers.proto\032\027google/rpc/status.proto\032\034google/api/annotations.proto\"\361\021\n"
+          + ")google/devtools/cloudtrace/v2/trace.proto\022\035google.devtools.cloudtrace.v2\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\036google/protobuf/wrappers.proto\032\027google/rpc/status.proto\032\034google/api/annotations.proto\"\361\021\n"
           + "\004Span\022\021\n"
           + "\004name\030\001 \001(\tB\003\340A\002\022\024\n"
           + "\007span_id\030\002 \001(\tB\003\340A\002\022\026\n"
