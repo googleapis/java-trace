@@ -27,8 +27,6 @@ jobs:
         access_token_lifetime: 300s
         token_format: 'access_token'
         cleanup_credentials: false
-    - run: ls -al /home/runner/work/java-trace
-    - run: ls -al /home/runner/work/java-trace/java-trace
     - uses: actions/setup-java@v2
       with:
         distribution: zulu
