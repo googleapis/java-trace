@@ -23,6 +23,8 @@ jobs:
         access_token_lifetime: 300s
         token_format: 'access_token'
         cleanup_credentials: false
+    - run: ls -al /home/runner/work/java-trace
+    - run: ls -al /home/runner/work/java-trace/java-trace
     - uses: actions/checkout@v2
       with:
         ref: ${{github.event.pull_request.head.ref}}
