@@ -32,7 +32,7 @@ jobs:
     - run: java -version
     - run: .kokoro/build.sh
       env:
-        JOB_TYPE: test
+        JOB_TYPE: integration
     - if: ${{ github.event.action == 'labeled' && github.event.label.name == 'actions:force-run' }}
       uses: actions/github-script@v5
       with:
