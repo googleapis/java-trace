@@ -15,6 +15,10 @@ jobs:
       pull-requests: 'write'
       id-token: 'write'
     steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: ${{github.event.pull_request.head.ref}}
+        repository: ${{github.event.pull_request.head.repo.full_name}}
     - uses: 'google-github-actions/auth@v0.4.2'
       with:
         workload_identity_provider: 'projects/1016721519174/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider'
@@ -25,10 +29,6 @@ jobs:
         cleanup_credentials: false
     - run: ls -al /home/runner/work/java-trace
     - run: ls -al /home/runner/work/java-trace/java-trace
-    - uses: actions/checkout@v2
-      with:
-        ref: ${{github.event.pull_request.head.ref}}
-        repository: ${{github.event.pull_request.head.repo.full_name}}
     - uses: actions/setup-java@v2
       with:
         distribution: zulu
