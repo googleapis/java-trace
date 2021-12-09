@@ -20,12 +20,11 @@ jobs:
         workload_identity_provider: 'projects/1016721519174/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider'
         service_account: 'it-service-account@gcloud-devel.iam.gserviceaccount.com'
         create_credentials_file: 'true'
-        access_token_lifetime: 10s
+        access_token_lifetime: 300s
     - uses: actions/checkout@v2
       with:
         ref: ${{github.event.pull_request.head.ref}}
         repository: ${{github.event.pull_request.head.repo.full_name}}
-    - run: cat ${GOOGLE_APPLICATION_CREDENTIALS}
     - uses: actions/setup-java@v2
       with:
         distribution: zulu
@@ -34,6 +33,7 @@ jobs:
     - run: .kokoro/build.sh
       env:
         JOB_TYPE: integration
+        GOOGLE_CLOUD_PROJECT: gcloud-devel
     - if: ${{ github.event.action == 'labeled' && github.event.label.name == 'actions:force-run' }}
       uses: actions/github-script@v5
       with:
