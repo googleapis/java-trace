@@ -15,12 +15,13 @@ jobs:
       pull-requests: 'write'
       id-token: 'write'
     steps:
-    - uses: 'google-github-actions/auth@v0.3.1'
+    - uses: 'google-github-actions/auth@v0.4.1'
       with:
         workload_identity_provider: 'projects/1016721519174/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider'
         service_account: 'it-service-account@gcloud-devel.iam.gserviceaccount.com'
         create_credentials_file: 'true'
         access_token_lifetime: 300s
+        token_format: 'access_token'
     - uses: actions/checkout@v2
       with:
         ref: ${{github.event.pull_request.head.ref}}
