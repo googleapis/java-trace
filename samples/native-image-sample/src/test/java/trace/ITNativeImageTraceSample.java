@@ -29,12 +29,12 @@ public class ITNativeImageTraceSample {
   @Before
   public void setUp() throws Exception {
     bout = new ByteArrayOutputStream();
-    System.setOut( new PrintStream(bout));
+    System.setOut(new PrintStream(bout));
   }
 
   @Test
   public void testRunSampleApplication() throws Exception {
-    TraceSampleApplication.main(new String[]{});
+    TraceSampleApplication.main(new String[] {});
     String output = bout.toString();
     assertThat(output).contains("Retrieved trace:");
     assertThat(output).contains("Span: nativeimage-trace-sample-test");

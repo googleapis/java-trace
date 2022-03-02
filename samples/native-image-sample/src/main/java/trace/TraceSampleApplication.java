@@ -29,14 +29,10 @@ import java.io.IOException;
 import java.time.Instant;
 import java.util.UUID;
 
-/**
- * Sample application demonstrating using the Google Trace client libraries.
- */
+/** Sample application demonstrating using the Google Trace client libraries. */
 public class TraceSampleApplication {
 
-  /**
-   * Runs basic methods in the Trace client libraries.
-   */
+  /** Runs basic methods in the Trace client libraries. */
   public static void main(String[] args) throws IOException, InterruptedException {
     String projectId = ServiceOptions.getDefaultProjectId();
     TraceServiceClient traceServiceClient = TraceServiceClient.create();
@@ -53,10 +49,7 @@ public class TraceSampleApplication {
     try {
       // This checks Cloud trace for the new trace that was just created.
       GetTraceRequest getTraceRequest =
-          GetTraceRequest.newBuilder()
-              .setProjectId(projectId)
-              .setTraceId(traceId)
-              .build();
+          GetTraceRequest.newBuilder().setProjectId(projectId).setTraceId(traceId).build();
 
       Trace trace = traceServiceClient.getTrace(getTraceRequest);
 
@@ -66,26 +59,30 @@ public class TraceSampleApplication {
         System.out.println("Span: " + span.getName());
       }
     } catch (NotFoundException e) {
-      System.out.println("We didn't find the trace: " + traceId + ". "
-          + "This is usually because we did not wait long enough. "
-          + "Please check https://console.cloud.google.com/traces/traces to "
-          + "find your trace in the traces viewer.");
+      System.out.println(
+          "We didn't find the trace: "
+              + traceId
+              + ". "
+              + "This is usually because we did not wait long enough. "
+              + "Please check https://console.cloud.google.com/traces/traces to "
+              + "find your trace in the traces viewer.");
     }
   }
 
   private static PatchTracesRequest createPatchTraceRequest(String traceId, String projectId) {
     long currentTime = Instant.now().toEpochMilli() / 1000;
 
-    Trace trace = Trace.newBuilder()
-        .setProjectId(projectId)
-        .setTraceId(traceId)
-        .addSpans(
-            TraceSpan.newBuilder()
-                .setSpanId(1)
-                .setName("nativeimage-trace-sample-test")
-                .setStartTime(Timestamp.newBuilder().setSeconds(currentTime - 5))
-                .setEndTime(Timestamp.newBuilder().setSeconds(currentTime)))
-        .build();
+    Trace trace =
+        Trace.newBuilder()
+            .setProjectId(projectId)
+            .setTraceId(traceId)
+            .addSpans(
+                TraceSpan.newBuilder()
+                    .setSpanId(1)
+                    .setName("nativeimage-trace-sample-test")
+                    .setStartTime(Timestamp.newBuilder().setSeconds(currentTime - 5))
+                    .setEndTime(Timestamp.newBuilder().setSeconds(currentTime)))
+            .build();
 
     PatchTracesRequest request =
         PatchTracesRequest.newBuilder()
