@@ -146,7 +146,6 @@
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
                 <buildArg>--initialize-at-build-time</buildArg>
-                <buildArg>--features=com.google.cloud.nativeimage.features.ProtobufMessageFeature</buildArg>
               </buildArgs>
             </configuration>
             <executions>
