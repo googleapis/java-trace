@@ -73,3 +73,8 @@ Navigate to this directory in a new terminal.
    ```
    $ mvn test -P native
    ```
+
+5. Containerize the native app using the provided Dockerfile:
+   ```
+   $ mvn build .
+   ```
