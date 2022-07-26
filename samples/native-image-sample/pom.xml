@@ -139,7 +139,6 @@
               <buildArgs>
                 <buildArg>--no-fallback</buildArg>
                 <buildArg>--no-server</buildArg>
-                <buildArg>--initialize-at-build-time</buildArg>
               </buildArgs>
             </configuration>
             <executions>
@@ -147,7 +146,6 @@
                 <id>build-native</id>
                 <goals>
                   <goal>build</goal>
-                  <goal>test</goal>
                 </goals>
                 <phase>package</phase>
               </execution>
