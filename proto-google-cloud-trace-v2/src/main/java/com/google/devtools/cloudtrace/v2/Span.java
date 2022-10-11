@@ -60,228 +60,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private Span(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              spanId_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              parentSpanId_ = s;
-              break;
-            }
-          case 34:
-            {
-              com.google.devtools.cloudtrace.v2.TruncatableString.Builder subBuilder = null;
-              if (displayName_ != null) {
-                subBuilder = displayName_.toBuilder();
-              }
-              displayName_ =
-                  input.readMessage(
-                      com.google.devtools.cloudtrace.v2.TruncatableString.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(displayName_);
-                displayName_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 42:
-            {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (startTime_ != null) {
-                subBuilder = startTime_.toBuilder();
-              }
-              startTime_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(startTime_);
-                startTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 50:
-            {
-              com.google.protobuf.Timestamp.Builder subBuilder = null;
-              if (endTime_ != null) {
-                subBuilder = endTime_.toBuilder();
-              }
-              endTime_ =
-                  input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(endTime_);
-                endTime_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 58:
-            {
-              com.google.devtools.cloudtrace.v2.Span.Attributes.Builder subBuilder = null;
-              if (attributes_ != null) {
-                subBuilder = attributes_.toBuilder();
-              }
-              attributes_ =
-                  input.readMessage(
-                      com.google.devtools.cloudtrace.v2.Span.Attributes.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(attributes_);
-                attributes_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 66:
-            {
-              com.google.devtools.cloudtrace.v2.StackTrace.Builder subBuilder = null;
-              if (stackTrace_ != null) {
-                subBuilder = stackTrace_.toBuilder();
-              }
-              stackTrace_ =
-                  input.readMessage(
-                      com.google.devtools.cloudtrace.v2.StackTrace.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(stackTrace_);
-                stackTrace_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 74:
-            {
-              com.google.devtools.cloudtrace.v2.Span.TimeEvents.Builder subBuilder = null;
-              if (timeEvents_ != null) {
-                subBuilder = timeEvents_.toBuilder();
-              }
-              timeEvents_ =
-                  input.readMessage(
-                      com.google.devtools.cloudtrace.v2.Span.TimeEvents.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(timeEvents_);
-                timeEvents_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 82:
-            {
-              com.google.devtools.cloudtrace.v2.Span.Links.Builder subBuilder = null;
-              if (links_ != null) {
-                subBuilder = links_.toBuilder();
-              }
-              links_ =
-                  input.readMessage(
-                      com.google.devtools.cloudtrace.v2.Span.Links.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(links_);
-                links_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 90:
-            {
-              com.google.rpc.Status.Builder subBuilder = null;
-              if (status_ != null) {
-                subBuilder = status_.toBuilder();
-              }
-              status_ = input.readMessage(com.google.rpc.Status.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(status_);
-                status_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 98:
-            {
-              com.google.protobuf.BoolValue.Builder subBuilder = null;
-              if (sameProcessAsParentSpan_ != null) {
-                subBuilder = sameProcessAsParentSpan_.toBuilder();
-              }
-              sameProcessAsParentSpan_ =
-                  input.readMessage(com.google.protobuf.BoolValue.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(sameProcessAsParentSpan_);
-                sameProcessAsParentSpan_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 106:
-            {
-              com.google.protobuf.Int32Value.Builder subBuilder = null;
-              if (childSpanCount_ != null) {
-                subBuilder = childSpanCount_.toBuilder();
-              }
-              childSpanCount_ =
-                  input.readMessage(com.google.protobuf.Int32Value.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(childSpanCount_);
-                childSpanCount_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 112:
-            {
-              int rawValue = input.readEnum();
-
-              spanKind_ = rawValue;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.devtools.cloudtrace.v2.TraceProto
         .internal_static_google_devtools_cloudtrace_v2_Span_descriptor;
@@ -678,68 +456,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       return this.unknownFields;
     }
 
-    private Attributes(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  attributeMap_ =
-                      com.google.protobuf.MapField.newMapField(
-                          AttributeMapDefaultEntryHolder.defaultEntry);
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                com.google.protobuf.MapEntry<
-                        java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue>
-                    attributeMap__ =
-                        input.readMessage(
-                            AttributeMapDefaultEntryHolder.defaultEntry.getParserForType(),
-                            extensionRegistry);
-                attributeMap_
-                    .getMutableMap()
-                    .put(attributeMap__.getKey(), attributeMap__.getValue());
-                break;
-              }
-            case 16:
-              {
-                droppedAttributesCount_ = input.readInt32();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.devtools.cloudtrace.v2.TraceProto
           .internal_static_google_devtools_cloudtrace_v2_Span_Attributes_descriptor;
@@ -818,7 +534,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsAttributeMap(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetAttributeMap().getMap().containsKey(key);
     }
@@ -868,7 +584,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrDefault(
         java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
           internalGetAttributeMap().getMap();
@@ -893,7 +609,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrThrow(
         java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
           internalGetAttributeMap().getMap();
@@ -942,7 +658,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (droppedAttributesCount_ != 0) {
         output.writeInt32(2, droppedAttributesCount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -966,7 +682,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (droppedAttributesCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, droppedAttributesCount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -984,7 +700,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
 
       if (!internalGetAttributeMap().equals(other.internalGetAttributeMap())) return false;
       if (getDroppedAttributesCount() != other.getDroppedAttributesCount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -1001,7 +717,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
       hash = (37 * hash) + DROPPED_ATTRIBUTES_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getDroppedAttributesCount();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -1152,17 +868,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.devtools.cloudtrace.v2.Span.Attributes.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -1258,7 +967,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (other.getDroppedAttributesCount() != 0) {
           setDroppedAttributesCount(other.getDroppedAttributesCount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1273,18 +982,50 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.devtools.cloudtrace.v2.Span.Attributes parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.protobuf.MapEntry<
+                          java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue>
+                      attributeMap__ =
+                          input.readMessage(
+                              AttributeMapDefaultEntryHolder.defaultEntry.getParserForType(),
+                              extensionRegistry);
+                  internalGetMutableAttributeMap()
+                      .getMutableMap()
+                      .put(attributeMap__.getKey(), attributeMap__.getValue());
+                  break;
+                } // case 10
+              case 16:
+                {
+                  droppedAttributesCount_ = input.readInt32();
+
+                  break;
+                } // case 16
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.devtools.cloudtrace.v2.Span.Attributes) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1340,7 +1081,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public boolean containsAttributeMap(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetAttributeMap().getMap().containsKey(key);
       }
@@ -1390,7 +1131,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrDefault(
           java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
             internalGetAttributeMap().getMap();
@@ -1415,7 +1156,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrThrow(
           java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
             internalGetAttributeMap().getMap();
@@ -1446,7 +1187,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
        */
       public Builder removeAttributeMap(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableAttributeMap().getMutableMap().remove(key);
         return this;
@@ -1475,11 +1216,12 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public Builder putAttributeMap(
           java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableAttributeMap().getMutableMap().put(key, value);
         return this;
       }
@@ -1596,7 +1338,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Attributes(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -1760,100 +1514,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       return this.unknownFields;
     }
 
-    private TimeEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                com.google.protobuf.Timestamp.Builder subBuilder = null;
-                if (time_ != null) {
-                  subBuilder = time_.toBuilder();
-                }
-                time_ =
-                    input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(time_);
-                  time_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            case 18:
-              {
-                com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation.Builder subBuilder =
-                    null;
-                if (valueCase_ == 2) {
-                  subBuilder =
-                      ((com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation) value_)
-                          .toBuilder();
-                }
-                value_ =
-                    input.readMessage(
-                        com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation) value_);
-                  value_ = subBuilder.buildPartial();
-                }
-                valueCase_ = 2;
-                break;
-              }
-            case 26:
-              {
-                com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent.Builder subBuilder =
-                    null;
-                if (valueCase_ == 3) {
-                  subBuilder =
-                      ((com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent) value_)
-                          .toBuilder();
-                }
-                value_ =
-                    input.readMessage(
-                        com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(
-                      (com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent) value_);
-                  value_ = subBuilder.buildPartial();
-                }
-                valueCase_ = 3;
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.devtools.cloudtrace.v2.TraceProto
           .internal_static_google_devtools_cloudtrace_v2_Span_TimeEvent_descriptor;
@@ -1980,78 +1640,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
         return this.unknownFields;
-      }
-
-      private Annotation(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10:
-                {
-                  com.google.devtools.cloudtrace.v2.TruncatableString.Builder subBuilder = null;
-                  if (description_ != null) {
-                    subBuilder = description_.toBuilder();
-                  }
-                  description_ =
-                      input.readMessage(
-                          com.google.devtools.cloudtrace.v2.TruncatableString.parser(),
-                          extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(description_);
-                    description_ = subBuilder.buildPartial();
-                  }
-
-                  break;
-                }
-              case 18:
-                {
-                  com.google.devtools.cloudtrace.v2.Span.Attributes.Builder subBuilder = null;
-                  if (attributes_ != null) {
-                    subBuilder = attributes_.toBuilder();
-                  }
-                  attributes_ =
-                      input.readMessage(
-                          com.google.devtools.cloudtrace.v2.Span.Attributes.parser(),
-                          extensionRegistry);
-                  if (subBuilder != null) {
-                    subBuilder.mergeFrom(attributes_);
-                    attributes_ = subBuilder.buildPartial();
-                  }
-
-                  break;
-                }
-              default:
-                {
-                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -2192,7 +1780,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (attributes_ != null) {
           output.writeMessage(2, getAttributes());
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -2207,7 +1795,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (attributes_ != null) {
           size += com.google.protobuf.CodedOutputStream.computeMessageSize(2, getAttributes());
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -2231,7 +1819,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (hasAttributes()) {
           if (!getAttributes().equals(other.getAttributes())) return false;
         }
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -2250,7 +1838,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
           hash = (53 * hash) + getAttributes().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -2382,17 +1970,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         }
 
         // Construct using com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
+        private Builder() {}
 
         private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
         }
 
         @java.lang.Override
@@ -2508,7 +2089,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           if (other.hasAttributes()) {
             mergeAttributes(other.getAttributes());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -2523,19 +2104,43 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10:
+                  {
+                    input.readMessage(getDescriptionFieldBuilder().getBuilder(), extensionRegistry);
+
+                    break;
+                  } // case 10
+                case 18:
+                  {
+                    input.readMessage(getAttributesFieldBuilder().getBuilder(), extensionRegistry);
+
+                    break;
+                  } // case 18
+                default:
+                  {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage =
-                (com.google.devtools.cloudtrace.v2.Span.TimeEvent.Annotation)
-                    e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
 
@@ -2965,7 +2570,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                 throws com.google.protobuf.InvalidProtocolBufferException {
-              return new Annotation(input, extensionRegistry);
+              Builder builder = newBuilder();
+              try {
+                builder.mergeFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(builder.buildPartial());
+              } catch (com.google.protobuf.UninitializedMessageException e) {
+                throw e.asInvalidProtocolBufferException()
+                    .setUnfinishedMessage(builder.buildPartial());
+              } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                    .setUnfinishedMessage(builder.buildPartial());
+              }
+              return builder.buildPartial();
             }
           };
 
@@ -3091,66 +2708,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
         return this.unknownFields;
-      }
-
-      private MessageEvent(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 8:
-                {
-                  int rawValue = input.readEnum();
-
-                  type_ = rawValue;
-                  break;
-                }
-              case 16:
-                {
-                  id_ = input.readInt64();
-                  break;
-                }
-              case 24:
-                {
-                  uncompressedSizeBytes_ = input.readInt64();
-                  break;
-                }
-              case 32:
-                {
-                  compressedSizeBytes_ = input.readInt64();
-                  break;
-                }
-              default:
-                {
-                  if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                    done = true;
-                  }
-                  break;
-                }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
       }
 
       public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -3453,7 +3010,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (compressedSizeBytes_ != 0L) {
           output.writeInt64(4, compressedSizeBytes_);
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
       @java.lang.Override
@@ -3476,7 +3033,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (compressedSizeBytes_ != 0L) {
           size += com.google.protobuf.CodedOutputStream.computeInt64Size(4, compressedSizeBytes_);
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -3496,7 +3053,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (getId() != other.getId()) return false;
         if (getUncompressedSizeBytes() != other.getUncompressedSizeBytes()) return false;
         if (getCompressedSizeBytes() != other.getCompressedSizeBytes()) return false;
-        if (!unknownFields.equals(other.unknownFields)) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
 
@@ -3515,7 +3072,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getUncompressedSizeBytes());
         hash = (37 * hash) + COMPRESSED_SIZE_BYTES_FIELD_NUMBER;
         hash = (53 * hash) + com.google.protobuf.Internal.hashLong(getCompressedSizeBytes());
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
@@ -3650,17 +3207,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
 
         // Construct using
         // com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent.newBuilder()
-        private Builder() {
-          maybeForceBuilderInitialization();
-        }
+        private Builder() {}
 
         private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
-        }
-
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
         }
 
         @java.lang.Override
@@ -3772,7 +3322,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           if (other.getCompressedSizeBytes() != 0L) {
             setCompressedSizeBytes(other.getCompressedSizeBytes());
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
@@ -3787,19 +3337,55 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8:
+                  {
+                    type_ = input.readEnum();
+
+                    break;
+                  } // case 8
+                case 16:
+                  {
+                    id_ = input.readInt64();
+
+                    break;
+                  } // case 16
+                case 24:
+                  {
+                    uncompressedSizeBytes_ = input.readInt64();
+
+                    break;
+                  } // case 24
+                case 32:
+                  {
+                    compressedSizeBytes_ = input.readInt64();
+
+                    break;
+                  } // case 32
+                default:
+                  {
+                    if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                      done = true; // was an endgroup tag
+                    }
+                    break;
+                  } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage =
-                (com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent)
-                    e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
 
@@ -4102,7 +3688,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
                 com.google.protobuf.CodedInputStream input,
                 com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                 throws com.google.protobuf.InvalidProtocolBufferException {
-              return new MessageEvent(input, extensionRegistry);
+              Builder builder = newBuilder();
+              try {
+                builder.mergeFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(builder.buildPartial());
+              } catch (com.google.protobuf.UninitializedMessageException e) {
+                throw e.asInvalidProtocolBufferException()
+                    .setUnfinishedMessage(builder.buildPartial());
+              } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                    .setUnfinishedMessage(builder.buildPartial());
+              }
+              return builder.buildPartial();
             }
           };
 
@@ -4344,7 +3942,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         output.writeMessage(
             3, (com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent) value_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -4366,7 +3964,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedOutputStream.computeMessageSize(
                 3, (com.google.devtools.cloudtrace.v2.Span.TimeEvent.MessageEvent) value_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4397,7 +3995,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         case 0:
         default:
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -4424,7 +4022,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         case 0:
         default:
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -4555,17 +4153,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.devtools.cloudtrace.v2.Span.TimeEvent.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -4576,6 +4167,12 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         } else {
           time_ = null;
           timeBuilder_ = null;
+        }
+        if (annotationBuilder_ != null) {
+          annotationBuilder_.clear();
+        }
+        if (messageEventBuilder_ != null) {
+          messageEventBuilder_.clear();
         }
         valueCase_ = 0;
         value_ = null;
@@ -4697,7 +4294,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               break;
             }
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -4712,18 +4309,49 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.devtools.cloudtrace.v2.Span.TimeEvent parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  input.readMessage(getTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  input.readMessage(getAnnotationFieldBuilder().getBuilder(), extensionRegistry);
+                  valueCase_ = 2;
+                  break;
+                } // case 18
+              case 26:
+                {
+                  input.readMessage(getMessageEventFieldBuilder().getBuilder(), extensionRegistry);
+                  valueCase_ = 3;
+                  break;
+                } // case 26
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.devtools.cloudtrace.v2.Span.TimeEvent) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -5384,7 +5012,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new TimeEvent(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -5522,70 +5162,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private TimeEvents(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  timeEvent_ =
-                      new java.util.ArrayList<com.google.devtools.cloudtrace.v2.Span.TimeEvent>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                timeEvent_.add(
-                    input.readMessage(
-                        com.google.devtools.cloudtrace.v2.Span.TimeEvent.parser(),
-                        extensionRegistry));
-                break;
-              }
-            case 16:
-              {
-                droppedAnnotationsCount_ = input.readInt32();
-                break;
-              }
-            case 24:
-              {
-                droppedMessageEventsCount_ = input.readInt32();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          timeEvent_ = java.util.Collections.unmodifiableList(timeEvent_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -5734,7 +5310,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (droppedMessageEventsCount_ != 0) {
         output.writeInt32(3, droppedMessageEventsCount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -5753,7 +5329,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         size +=
             com.google.protobuf.CodedOutputStream.computeInt32Size(3, droppedMessageEventsCount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -5772,7 +5348,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (!getTimeEventList().equals(other.getTimeEventList())) return false;
       if (getDroppedAnnotationsCount() != other.getDroppedAnnotationsCount()) return false;
       if (getDroppedMessageEventsCount() != other.getDroppedMessageEventsCount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -5791,7 +5367,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       hash = (53 * hash) + getDroppedAnnotationsCount();
       hash = (37 * hash) + DROPPED_MESSAGE_EVENTS_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getDroppedMessageEventsCount();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -5924,19 +5500,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.devtools.cloudtrace.v2.Span.TimeEvents.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getTimeEventFieldBuilder();
-        }
       }
 
       @java.lang.Override
@@ -5944,10 +5511,11 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         super.clear();
         if (timeEventBuilder_ == null) {
           timeEvent_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          timeEvent_ = null;
           timeEventBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         droppedAnnotationsCount_ = 0;
 
         droppedMessageEventsCount_ = 0;
@@ -6076,7 +5644,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (other.getDroppedMessageEventsCount() != 0) {
           setDroppedMessageEventsCount(other.getDroppedMessageEventsCount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -6091,18 +5659,57 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.devtools.cloudtrace.v2.Span.TimeEvents parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.devtools.cloudtrace.v2.Span.TimeEvent m =
+                      input.readMessage(
+                          com.google.devtools.cloudtrace.v2.Span.TimeEvent.parser(),
+                          extensionRegistry);
+                  if (timeEventBuilder_ == null) {
+                    ensureTimeEventIsMutable();
+                    timeEvent_.add(m);
+                  } else {
+                    timeEventBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              case 16:
+                {
+                  droppedAnnotationsCount_ = input.readInt32();
+
+                  break;
+                } // case 16
+              case 24:
+                {
+                  droppedMessageEventsCount_ = input.readInt32();
+
+                  break;
+                } // case 24
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.devtools.cloudtrace.v2.Span.TimeEvents) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -6608,7 +6215,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new TimeEvents(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -6782,81 +6401,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private Link(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                traceId_ = s;
-                break;
-              }
-            case 18:
-              {
-                java.lang.String s = input.readStringRequireUtf8();
-
-                spanId_ = s;
-                break;
-              }
-            case 24:
-              {
-                int rawValue = input.readEnum();
-
-                type_ = rawValue;
-                break;
-              }
-            case 34:
-              {
-                com.google.devtools.cloudtrace.v2.Span.Attributes.Builder subBuilder = null;
-                if (attributes_ != null) {
-                  subBuilder = attributes_.toBuilder();
-                }
-                attributes_ =
-                    input.readMessage(
-                        com.google.devtools.cloudtrace.v2.Span.Attributes.parser(),
-                        extensionRegistry);
-                if (subBuilder != null) {
-                  subBuilder.mergeFrom(attributes_);
-                  attributes_ = subBuilder.buildPartial();
-                }
-
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -7245,7 +6789,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (attributes_ != null) {
         output.writeMessage(4, getAttributes());
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -7266,7 +6810,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (attributes_ != null) {
         size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getAttributes());
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -7289,7 +6833,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (hasAttributes()) {
         if (!getAttributes().equals(other.getAttributes())) return false;
       }
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -7310,7 +6854,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         hash = (37 * hash) + ATTRIBUTES_FIELD_NUMBER;
         hash = (53 * hash) + getAttributes().hashCode();
       }
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -7444,17 +6988,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.devtools.cloudtrace.v2.Span.Link.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -7572,7 +7109,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (other.hasAttributes()) {
           mergeAttributes(other.getAttributes());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -7587,17 +7124,55 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.devtools.cloudtrace.v2.Span.Link parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  traceId_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 10
+              case 18:
+                {
+                  spanId_ = input.readStringRequireUtf8();
+
+                  break;
+                } // case 18
+              case 24:
+                {
+                  type_ = input.readEnum();
+
+                  break;
+                } // case 24
+              case 34:
+                {
+                  input.readMessage(getAttributesFieldBuilder().getBuilder(), extensionRegistry);
+
+                  break;
+                } // case 34
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.devtools.cloudtrace.v2.Span.Link) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -8134,7 +7709,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Link(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -8257,63 +7844,6 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet getUnknownFields() {
       return this.unknownFields;
-    }
-
-    private Links(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10:
-              {
-                if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                  link_ = new java.util.ArrayList<com.google.devtools.cloudtrace.v2.Span.Link>();
-                  mutable_bitField0_ |= 0x00000001;
-                }
-                link_.add(
-                    input.readMessage(
-                        com.google.devtools.cloudtrace.v2.Span.Link.parser(), extensionRegistry));
-                break;
-              }
-            case 16:
-              {
-                droppedLinksCount_ = input.readInt32();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          link_ = java.util.Collections.unmodifiableList(link_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
@@ -8439,7 +7969,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (droppedLinksCount_ != 0) {
         output.writeInt32(2, droppedLinksCount_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -8454,7 +7984,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (droppedLinksCount_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, droppedLinksCount_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -8472,7 +8002,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
 
       if (!getLinkList().equals(other.getLinkList())) return false;
       if (getDroppedLinksCount() != other.getDroppedLinksCount()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -8489,7 +8019,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
       hash = (37 * hash) + DROPPED_LINKS_COUNT_FIELD_NUMBER;
       hash = (53 * hash) + getDroppedLinksCount();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -8621,19 +8151,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.devtools.cloudtrace.v2.Span.Links.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-          getLinkFieldBuilder();
-        }
       }
 
       @java.lang.Override
@@ -8641,10 +8162,11 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         super.clear();
         if (linkBuilder_ == null) {
           link_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          link_ = null;
           linkBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         droppedLinksCount_ = 0;
 
         return this;
@@ -8766,7 +8288,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         if (other.getDroppedLinksCount() != 0) {
           setDroppedLinksCount(other.getDroppedLinksCount());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -8781,17 +8303,50 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.devtools.cloudtrace.v2.Span.Links parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10:
+                {
+                  com.google.devtools.cloudtrace.v2.Span.Link m =
+                      input.readMessage(
+                          com.google.devtools.cloudtrace.v2.Span.Link.parser(), extensionRegistry);
+                  if (linkBuilder_ == null) {
+                    ensureLinkIsMutable();
+                    link_.add(m);
+                  } else {
+                    linkBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 10
+              case 16:
+                {
+                  droppedLinksCount_ = input.readInt32();
+
+                  break;
+                } // case 16
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.google.devtools.cloudtrace.v2.Span.Links) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -9234,7 +8789,19 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new Links(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -10056,7 +9623,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         != com.google.devtools.cloudtrace.v2.Span.SpanKind.SPAN_KIND_UNSPECIFIED.getNumber()) {
       output.writeEnum(14, spanKind_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -10110,7 +9677,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         != com.google.devtools.cloudtrace.v2.Span.SpanKind.SPAN_KIND_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream.computeEnumSize(14, spanKind_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -10169,7 +9736,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (!getChildSpanCount().equals(other.getChildSpanCount())) return false;
     }
     if (spanKind_ != other.spanKind_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -10228,7 +9795,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     }
     hash = (37 * hash) + SPAN_KIND_FIELD_NUMBER;
     hash = (53 * hash) + spanKind_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -10362,17 +9929,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.devtools.cloudtrace.v2.Span.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -10621,7 +10181,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (other.spanKind_ != 0) {
         setSpanKindValue(other.getSpanKindValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -10636,17 +10196,116 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.devtools.cloudtrace.v2.Span parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 18:
+              {
+                spanId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+            case 26:
+              {
+                parentSpanId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+            case 34:
+              {
+                input.readMessage(getDisplayNameFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 34
+            case 42:
+              {
+                input.readMessage(getStartTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 42
+            case 50:
+              {
+                input.readMessage(getEndTimeFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 50
+            case 58:
+              {
+                input.readMessage(getAttributesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 58
+            case 66:
+              {
+                input.readMessage(getStackTraceFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 66
+            case 74:
+              {
+                input.readMessage(getTimeEventsFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 74
+            case 82:
+              {
+                input.readMessage(getLinksFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 82
+            case 90:
+              {
+                input.readMessage(getStatusFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 90
+            case 98:
+              {
+                input.readMessage(
+                    getSameProcessAsParentSpanFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 98
+            case 106:
+              {
+                input.readMessage(getChildSpanCountFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 106
+            case 112:
+              {
+                spanKind_ = input.readEnum();
+
+                break;
+              } // case 112
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.devtools.cloudtrace.v2.Span) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -13188,7 +12847,18 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Span(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
