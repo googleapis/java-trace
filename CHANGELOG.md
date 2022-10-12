@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.12](https://github.com/googleapis/java-trace/compare/v2.1.11...v2.1.12) (2022-10-11)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (2.1.x) ([#866](https://github.com/googleapis/java-trace/issues/866)) ([e1b4525](https://github.com/googleapis/java-trace/commit/e1b4525865e5e8675b806b6d0a07760541ff8cdb))
+
 ### [2.1.11](https://github.com/googleapis/java-trace/compare/v2.1.10...v2.1.11) (2022-04-15)
 
 
