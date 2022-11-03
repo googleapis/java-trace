@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0-sp.3](https://github.com/googleapis/java-trace/compare/v1.3.0-sp.2...v1.3.0-sp.3) (2022-11-02)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (1.3.0-sp) ([#922](https://github.com/googleapis/java-trace/issues/922)) ([2e7f486](https://github.com/googleapis/java-trace/commit/2e7f4862b6292de293811dda63de16b8ab535406))
+
 ## [1.3.0-sp.2](https://www.github.com/googleapis/java-trace/compare/1.3.0-sp.1...v1.3.0-sp.2) (2021-11-11)
 
 
