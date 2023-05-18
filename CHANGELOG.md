@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.13](https://github.com/googleapis/java-trace/compare/v2.1.12...v2.1.13) (2023-05-18)
+
+
+### Documentation
+
+* README update for new location ([#951](https://github.com/googleapis/java-trace/issues/951)) ([97340a0](https://github.com/googleapis/java-trace/commit/97340a04848e0b624dd590bd2aabcfa8c25d9363))
+
 ## [2.1.12](https://github.com/googleapis/java-trace/compare/v2.1.11...v2.1.12) (2022-10-11)
 
 
